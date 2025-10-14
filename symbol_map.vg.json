@@ -30,7 +30,7 @@
     },
     {
       "data":{
-        "url": "data/MapData.csv"
+        "url": "https://raw.githubusercontent.com/bspi0005/FIT3179DataVisualisation2/refs/heads/master/data/MapData.csv"
       },
         "transform": [
           {"calculate": "datum.MPASKM*1000000", "as": "PASKM"}

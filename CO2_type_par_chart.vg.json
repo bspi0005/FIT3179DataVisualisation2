@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "data": {
-    "url": "data/CO2perPASKM.csv"
+    "url": "https://raw.githubusercontent.com/bspi0005/FIT3179DataVisualisation2/refs/heads/master/data/CO2perPASKM.csv"
   },
   "width": "container",
   "layer": [

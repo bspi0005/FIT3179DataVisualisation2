@@ -4,7 +4,7 @@
   "width": "container",
   "height": 500,
   "data": {
-    "url": "data/Vis2DataV3.csv"
+    "url": "https://raw.githubusercontent.com/bspi0005/FIT3179DataVisualisation2/refs/heads/master/data/Vis2DataV3.csv"
   },
   "params": [{
       "name": "type_select",
