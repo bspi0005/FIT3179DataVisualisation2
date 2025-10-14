@@ -1,0 +1,54 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "data/Vis2DataV3.csv"
+  },
+  "width": "container",
+  "params": [{
+      "name": "type_select",
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "Buses",
+          "Cars",
+          "Rail"
+        ],
+        "labels":[
+          "Show All",
+          "Buses",
+          "Cars",
+          "Rail"
+        ],
+        "name": "Transport Type: "
+      }
+  }],
+  "transform": [
+    {"filter": "type_select == null || datum.Type == type_select"}
+    ],
+  "layer": [
+  {
+    "mark": "bar",
+    "title": "Percentage of Passenger Killomertres by Transport Type, and Total MPASKM per Country",
+    "encoding": {
+      "x": {"aggregate": "sum", "field": "PASKM%", "scale": {"domain": [0, 100]}, "title": "Percentage of Total Passenger Killometes"},
+      "y": {"field": "Country"},
+      "color": {
+      "field": "Type",
+      "type": "nominal",
+      "scale": {
+        "domain": ["Buses", "Cars", "Rail"],
+        "range": ["#eeca3b", "#e45756", "#4c78a8"]
+      }
+      },
+      "tooltip": [
+        {"field": "Country", "type": "nominal", "title": "Country"},
+        {"field": "Type", "type": "nominal", "title": "Transport Type"},
+        {"field": "PASKM%", "type": "quantitative", "title": "% of PASKM", "format" : ".2f"},
+        {"field": "MPASKM", "type": "quantitative", "title": "MPASKM", "format" : ","}
+      ]
+    }
+  }
+  ],
+  "config": {}
+}
