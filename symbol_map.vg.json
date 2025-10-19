@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Passenger Transport by Transport Method in Million Passenger Killometers (MPASKM)",
+  "title": "Passenger Transport by Transport Typed in Million Passenger Killometers (MPASKM)",
   "width": "container",
   "height": 500,
   "data": {

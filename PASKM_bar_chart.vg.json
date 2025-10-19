@@ -29,7 +29,7 @@
   "layer": [
   {
     "mark": "bar",
-    "title": "Percentage of Passenger Killomertres by Transport Type, and Total MPASKM per Country",
+    "title": "Percentage of Total Passenger Killomertres by Transport Type per Country",
     "encoding": {
       "x": {"aggregate": "sum", "field": "PASKM%", "scale": {"domain": [0, 100]}, "title": "Percentage of Total Passenger Killometes"},
       "y": {"field": "Country"},
